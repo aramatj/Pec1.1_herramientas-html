@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/95b07c22d3.js" crossorigin="anonymous"></script>
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Desarrollo front-end</title>
+    <title>Desarrollo-front-end</title>
 </head>
 <body>
 
+   
     <header class="encabezado">
+        <div id="particulas-js"></div>
         <h1>Desarrollo front-end</h1>
         <div>
             <nav>
                 <ul>
                     <li><a href="Module Bundlers.html">Module Bundlers</a></li>
-                    <li><a href="index.html"><img class="logo" src="img/icono1.png" alt=""></a></li>
+                    <li><a href="index.html"><img class="logo" src="img/icono1.png" alt="logo_de_pagina"></a></li>
                     <li><a href="Lenguajes del Front-end.html"> Lenguajes del Front-end</a></li>
                 </ul>
             </nav>
@@ -29,7 +32,7 @@
     <section class="contenido">
         <img class="infograf" src="img/pecFrontEnd.png" alt="">
         <article class="post">
-            <h2>Desarrollo web Front-end</h2>
+            <h2>Desarrollo web</h2>
             <p class="borde_izq">El desarrollo<span lang="en">web Front-end</span> consiste en la conversión de datos 
                 en una interfaz gráfica para que el usuario pueda ver e interactuar con 
                 la información de forma digital usando HTML, CSS y JavaScript.</p>
@@ -43,30 +46,28 @@
        
 
     </section>
+   
     
     <footer class="pie-pag">
-        <div class="bloque_uno">
-            <ul>
-                <li><a href="">Sobre nosotros </a></li>
-                <li><a href="">Aviso legal </a></li>
-                <li><a href=""> Política de privacidad  </a></li>
-
-            </ul>
+    
+        <div class="contenedorPie" id="contenedorPie">
+            <p class="btn_abrir_footer" id="btn_abrir_footer">
+                <i class="fas fa-box-open"></i>
+            </p>  
+            <h2 class="tituloFooter">Desarrollo front- end</h2> 
+            <nav class="elementos_navFooter">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contacto</a></li>
+                   
+                </ul>
+            </nav>
            
-
-        </div>
-        <div class="bloque_dos">
-            <ul>
-                <li><a href="">Facebook</a></li>
-                <li><a href="">Twitter </a></li>
-                <li><a href="">Youtube</a></li>
-
-            </ul>
-        
-
-        </div>
-            
+        </div>  
+          
         <div class="bloque_tres">
+            
             <p>© 2020 Tamara Silvana Jima González. Trabajo realizado para la asignatura - Herramientas HTML y CSS aula 1</p>
             <p>Textos elaborados a partir de la información consultada en: </p>
             <a href="https://es.wikipedia.org/wiki/Desarrollo_web_Front-end"> Wikipedia/ Desarrollo web Front-end</a>
@@ -76,9 +77,17 @@
         
     </footer>
 
-
-
-    <script src="./index.js"></script>
+    <script src="./index.js"> 
+    </script>
+    <script src="./particles.min.js"></script>
     
+    <script>
+        const menu = document.getElementById('btn_abrir_footer');
+        menu.addEventListener("click", () => {
+            document.getElementById('contenedorPie').classList.toggle('active');
+        });
+    </script>
+    
+    <script src="./particulas.js"> </script>
 </body>
 </html>
