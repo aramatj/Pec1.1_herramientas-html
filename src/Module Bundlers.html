@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="https://kit.fontawesome.com/95b07c22d3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Module Bundlers</title>
+    <title>Module-Bundlers</title>
 </head>
 
 <body>
@@ -36,7 +36,12 @@
     </div>
     
     <section class="contenido">
-        <iframe class="video" src="https://www.youtube.com/embed/mWmZG4Vqwl0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <video class="video" src="https://www.youtube.com/embed/mWmZG4Vqwl0" >
+            Lo sentimos. Este vídeo no puede ser reproducido en tu navegador.<br>
+            La versión descargable está disponible en <a href="https://www.youtube.com/embed/mWmZG4Vqwl0">Enlace</a>. 
+            </video>
+        
 
         <article class="post">
             <h2>Module Bundlers</h2>
@@ -64,26 +69,21 @@
     </section>
     
     <footer class="pie-pag">
-        <div class="bloque_uno">
-            <ul>
-                <li><a href="">Sobre nosotros </a></li>
-                <li><a href="">Aviso legal </a></li>
-                <li><a href=""> Política de privacidad  </a></li>
-
-            </ul>
+        <div class="contenedorPie" id="contenedorPie">
+            <p class="btn_abrir_footer" id="btn_abrir_footer">
+                <i class="fas fa-box-open"></i>
+            </p>  
+            <h2 class="tituloFooter">Desarrollo front- end</h2> 
+            <nav class="elementos_navFooter">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contacto</a></li>
+                   
+                </ul>
+            </nav>
            
-
-        </div>
-        <div class="bloque_dos">
-            <ul>
-                <li><a href="">Facebook</a></li>
-                <li><a href="">Twitter </a></li>
-                <li><a href="">Youtube</a></li>
-
-            </ul>
-        
-
-        </div>
+        </div>  
             
         <div class="bloque_tres">
             <p>© 2020 Tamara Silvana Jima González. Trabajo realizado para la asignatura - Herramientas HTML y CSS aula 1</p>
@@ -95,9 +95,13 @@
         
     </footer>
 
-
-
-    <script src="./index.js"></script>
+    
+    <script>
+        const menu = document.getElementById('btn_abrir_footer');
+        menu.addEventListener("click", () => {
+            document.getElementById('contenedorPie').classList.toggle('active');
+        });
+    </script>
     
 </body>
 </html>
